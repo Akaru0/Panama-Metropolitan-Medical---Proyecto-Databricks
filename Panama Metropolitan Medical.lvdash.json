@@ -1,31 +1,158 @@
 {
+  "datasets": [
+    {
+      "name": "c8e8af4b",
+      "displayName": "segmentacion_demografica",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.segmentacion_demografica",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "0e15cb46",
+      "displayName": "rentabilidad_especialidad",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.rentabilidad_especialidad",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "97b92ff3",
+      "displayName": "rendimiento_aseguradora",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.rendimiento_aseguradora",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "552dea8b",
+      "displayName": "kpis_medicos",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.kpis_medicos",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "c2c386cd",
+      "displayName": "citas_jornadas",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.citas_jornadas",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "b159d844",
+      "displayName": "citas_especialidad",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.citas_especialidad",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "7e94b014",
+      "displayName": "cancelacion_sucursal",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.cancelacion_sucursal",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    }
+  ],
   "pages": [
     {
       "name": "3a213569",
       "displayName": "Untitled page",
       "layout": [
-        {
-          "widget": {
-            "name": "9e63200a",
-            "spec": {
-              "version": 3,
-              "frame": {
-                "showTitle": false
-              },
-              "widgetType": "bar",
-              "encodings": {},
-              "data": {
-                "queryName": "main_query"
-              }
-            }
-          },
-          "position": {
-            "x": 0,
-            "y": 2,
-            "width": 6,
-            "height": 6
-          }
-        },
         {
           "widget": {
             "name": "0ba00bd0",
@@ -44,13 +171,40 @@
         },
         {
           "widget": {
-            "name": "ede9728f",
+            "name": "fecha",
+            "queries": [
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f1822092211de58e117fe7326c03ed_Especialidad",
+                "query": {
+                  "datasetName": "b159d844",
+                  "fields": [
+                    {
+                      "name": "Especialidad",
+                      "expression": "`Especialidad`"
+                    },
+                    {
+                      "name": "Especialidad_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
             "spec": {
               "version": 2,
-              "widgetType": "filter-single-select",
-              "encodings": {},
               "frame": {
-                "showTitle": true
+                "showTitle": true,
+                "title": "Especialidad"
+              },
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Especialidad",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f1822092211de58e117fe7326c03ed_Especialidad"
+                  }
+                ]
               }
             }
           },
@@ -63,15 +217,40 @@
         },
         {
           "widget": {
-            "name": "7d724091",
+            "name": "sucursal",
+            "queries": [
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f1822094bd13fda5533532263fd6f0_Sucursal",
+                "query": {
+                  "datasetName": "7e94b014",
+                  "fields": [
+                    {
+                      "name": "Sucursal",
+                      "expression": "`Sucursal`"
+                    },
+                    {
+                      "name": "Sucursal_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
             "spec": {
               "version": 2,
               "frame": {
-                "showTitle": true
+                "showTitle": true,
+                "title": "Sucursal"
               },
-              "widgetType": "filter-single-select",
+              "widgetType": "filter-multi-select",
               "encodings": {
-                "fields": []
+                "fields": [
+                  {
+                    "fieldName": "Sucursal",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f1822094bd13fda5533532263fd6f0_Sucursal"
+                  }
+                ]
               }
             }
           },
@@ -80,6 +259,286 @@
             "y": 1,
             "width": 4,
             "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "ingresos",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "552dea8b",
+                  "fields": [
+                    {
+                      "name": "sum(ingresos)",
+                      "expression": "SUM(`ingresos`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "title": "Ingresos Totales  "
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(ingresos)",
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "USD",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "94dd1e3a",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "552dea8b",
+                  "fields": [
+                    {
+                      "name": "sum(citas)",
+                      "expression": "SUM(`citas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "title": "Citas Totales  "
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(citas)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 2,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "porcentaje-cancelacion",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "552dea8b",
+                  "fields": [
+                    {
+                      "name": "avg(tasa_cancelacion)",
+                      "expression": "AVG(`tasa_cancelacion`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "title": "Porcentaje de Cancelación"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(tasa_cancelacion)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    },
+                    "significantFigures": {
+                      "type": "all"
+                    },
+                    "hideGroupSeparator": false
+                  },
+                  "formatTemplate": "{{ @formatted }}%"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 2,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "t1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "552dea8b",
+                  "fields": [
+                    {
+                      "name": "avg(ticket_promedio)",
+                      "expression": "AVG(`ticket_promedio`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "title": "Ticket Promedio"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(ticket_promedio)",
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "USD",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "exact",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 2,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "f1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "b159d844",
+                  "fields": [
+                    {
+                      "name": "sum(Facturacion_A_Seguros_USD)",
+                      "expression": "SUM(`Facturacion_A_Seguros_USD`)"
+                    },
+                    {
+                      "name": "Especialidad",
+                      "expression": "`Especialidad`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Facturación por Especialidad Médica ({{ filter:fecha }} )"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sum(Facturacion_A_Seguros_USD)",
+                  "axis": {
+                    "title": "Facturación a Seguros ($ USD)"
+                  },
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  },
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "Especialidad",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "x-reversed"
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 4,
+            "width": 6,
+            "height": 6
           }
         }
       ],
