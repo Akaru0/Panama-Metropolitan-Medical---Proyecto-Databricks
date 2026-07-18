@@ -39,48 +39,6 @@
       }
     },
     {
-      "name": "0b9742ea",
-      "displayName": "segmentacion_demografica",
-      "config": {
-        "version": "1.1",
-        "source": "workspace.default.segmentacion_demografica",
-        "dimensions": [
-          {
-            "expr": "source.*"
-          }
-        ],
-        "measures": [
-          {
-            "name": "count",
-            "expr": "COUNT(*)",
-            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
-            "displayName": "Count"
-          }
-        ]
-      }
-    },
-    {
-      "name": "e34ec836",
-      "displayName": "rentabilidad_especialidad",
-      "config": {
-        "version": "1.1",
-        "source": "workspace.default.rentabilidad_especialidad",
-        "dimensions": [
-          {
-            "expr": "source.*"
-          }
-        ],
-        "measures": [
-          {
-            "name": "count",
-            "expr": "COUNT(*)",
-            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
-            "displayName": "Count"
-          }
-        ]
-      }
-    },
-    {
       "name": "22553dc1",
       "displayName": "rendimiento_aseguradora",
       "config": {
@@ -102,7 +60,49 @@
       }
     },
     {
-      "name": "1adecd5d",
+      "name": "148bbd75",
+      "displayName": "segmentacion_demografica",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.segmentacion_demografica",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fdf50fbf",
+      "displayName": "rentabilidad_especialidad",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.rentabilidad_especialidad",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "25e4d564",
       "displayName": "citas_jornadas",
       "config": {
         "version": "1.1",
@@ -123,7 +123,7 @@
       }
     },
     {
-      "name": "378ccce5",
+      "name": "7a344386",
       "displayName": "citas_especialidad",
       "config": {
         "version": "1.1",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "name": "e905577c",
+      "name": "5ab4b166",
       "displayName": "cancelacion_sucursal",
       "config": {
         "version": "1.1",
@@ -168,7 +168,7 @@
   "pages": [
     {
       "name": "3a213569",
-      "displayName": "Untitled page",
+      "displayName": "Dashboard",
       "layout": [
         {
           "widget": {
@@ -223,6 +223,40 @@
                   ],
                   "disaggregated": false
                 }
+              },
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f1824755471fac8599f1ee0cc545a6_Sucursal",
+                "query": {
+                  "datasetName": "22553dc1",
+                  "fields": [
+                    {
+                      "name": "Sucursal",
+                      "expression": "`Sucursal`"
+                    },
+                    {
+                      "name": "Sucursal_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252e14f14ac86ea80c02339e923_Sucursal",
+                "query": {
+                  "datasetName": "5ab4b166",
+                  "fields": [
+                    {
+                      "name": "Sucursal",
+                      "expression": "`Sucursal`"
+                    },
+                    {
+                      "name": "Sucursal_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
               }
             ],
             "spec": {
@@ -241,6 +275,14 @@
                   {
                     "fieldName": "nom_sucursal",
                     "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f182475a3516ee99b0579459d6ef67_nom_sucursal"
+                  },
+                  {
+                    "fieldName": "Sucursal",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f1824755471fac8599f1ee0cc545a6_Sucursal"
+                  },
+                  {
+                    "fieldName": "Sucursal",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252e14f14ac86ea80c02339e923_Sucursal"
                   }
                 ]
               }
@@ -290,6 +332,40 @@
                   ],
                   "disaggregated": false
                 }
+              },
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f1824755471fac8599f1ee0cc545a6_Especialidad",
+                "query": {
+                  "datasetName": "22553dc1",
+                  "fields": [
+                    {
+                      "name": "Especialidad",
+                      "expression": "`Especialidad`"
+                    },
+                    {
+                      "name": "Especialidad_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252e14f14ac86ea80c02339e923_Especialidad",
+                "query": {
+                  "datasetName": "5ab4b166",
+                  "fields": [
+                    {
+                      "name": "Especialidad",
+                      "expression": "`Especialidad`"
+                    },
+                    {
+                      "name": "Especialidad_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
               }
             ],
             "spec": {
@@ -308,6 +384,14 @@
                   {
                     "fieldName": "especialidad_medica",
                     "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f182475a3516ee99b0579459d6ef67_especialidad_medica"
+                  },
+                  {
+                    "fieldName": "Especialidad",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f1824755471fac8599f1ee0cc545a6_Especialidad"
+                  },
+                  {
+                    "fieldName": "Especialidad",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252e14f14ac86ea80c02339e923_Especialidad"
                   }
                 ]
               }
@@ -526,6 +610,270 @@
             "y": 2,
             "width": 3,
             "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "v",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "22553dc1",
+                  "fields": [
+                    {
+                      "name": "sum(Volumen_Citas)",
+                      "expression": "SUM(`Volumen_Citas`)"
+                    },
+                    {
+                      "name": "Aseguradora",
+                      "expression": "`Aseguradora`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Distribución de Citas por Aseguradora"
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "sum(Volumen_Citas)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Volumen de Citas Aseguradas"
+                },
+                "color": {
+                  "fieldName": "Aseguradora",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "Seguros SURA",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 1
+                        }
+                      },
+                      {
+                        "value": "Particular / Sin Seguro",
+                        "color": "#435665"
+                      },
+                      {
+                        "value": "Compañía Internacional de Seguros (IS)",
+                        "color": "#89273A"
+                      },
+                      {
+                        "value": "MAPFRE Panamá",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 5
+                        }
+                      }
+                    ]
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 5,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "porc1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5ab4b166",
+                  "fields": [
+                    {
+                      "name": "avg(Tasa_Cancelacion_PCT)",
+                      "expression": "AVG(`Tasa_Cancelacion_PCT`)"
+                    },
+                    {
+                      "name": "Especialidad",
+                      "expression": "`Especialidad`"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "DESC",
+                      "expression": "AVG(`Tasa_Cancelacion_PCT`)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Tasa de Cancelaciones por Especialidad"
+              },
+              "mark": {
+                "colors": [
+                  "#BC3939",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "avg(Tasa_Cancelacion_PCT)",
+                  "axis": {
+                    "hideLabels": false
+                  },
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  },
+                  "formatTemplate": "{{ @formatted }}%",
+                  "displayName": "Porcentaje de Cancelación",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "Especialidad",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "measure-reversed",
+                      "measure": {
+                        "fieldName": "avg(Tasa_Cancelacion_PCT)"
+                      }
+                    }
+                  }
+                },
+                "label": {
+                  "show": false
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 5,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "a23cd191",
+            "multilineTextboxSpec": {
+              "lines": [
+                "En el gráfico de pastel se visualiza el volumen de citas que fueron aseguradas por ciertas aseguradoras asociadas a la red de clínicas. Nos permite visualizar la distribución de quienes son aquellas aseguradoras que aportan principalmente."
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 11,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "7c6821d6",
+            "multilineTextboxSpec": {
+              "lines": [
+                "En el gráfico de pastel se visualiza el volumen de citas que fueron aseguradas por ciertas aseguradoras asociadas a la red de clínicas. Nos permite visualizar la distribución de quienes son aquellas aseguradoras que aportan principalmente."
+              ]
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 11,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "c06394f5",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5ab4b166",
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {}
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 13,
+            "width": 6,
+            "height": 6
           }
         }
       ],
