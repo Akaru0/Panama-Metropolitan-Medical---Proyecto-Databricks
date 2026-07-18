@@ -60,74 +60,11 @@
       }
     },
     {
-      "name": "148bbd75",
-      "displayName": "segmentacion_demografica",
-      "config": {
-        "version": "1.1",
-        "source": "workspace.default.segmentacion_demografica",
-        "dimensions": [
-          {
-            "expr": "source.*"
-          }
-        ],
-        "measures": [
-          {
-            "name": "count",
-            "expr": "COUNT(*)",
-            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
-            "displayName": "Count"
-          }
-        ]
-      }
-    },
-    {
       "name": "fdf50fbf",
       "displayName": "rentabilidad_especialidad",
       "config": {
         "version": "1.1",
         "source": "workspace.default.rentabilidad_especialidad",
-        "dimensions": [
-          {
-            "expr": "source.*"
-          }
-        ],
-        "measures": [
-          {
-            "name": "count",
-            "expr": "COUNT(*)",
-            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
-            "displayName": "Count"
-          }
-        ]
-      }
-    },
-    {
-      "name": "25e4d564",
-      "displayName": "citas_jornadas",
-      "config": {
-        "version": "1.1",
-        "source": "workspace.default.citas_jornadas",
-        "dimensions": [
-          {
-            "expr": "source.*"
-          }
-        ],
-        "measures": [
-          {
-            "name": "count",
-            "expr": "COUNT(*)",
-            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
-            "displayName": "Count"
-          }
-        ]
-      }
-    },
-    {
-      "name": "7a344386",
-      "displayName": "citas_especialidad",
-      "config": {
-        "version": "1.1",
-        "source": "workspace.default.citas_especialidad",
         "dimensions": [
           {
             "expr": "source.*"
@@ -163,6 +100,111 @@
           }
         ]
       }
+    },
+    {
+      "name": "96b807b5",
+      "displayName": "segmentacion_demografica",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.segmentacion_demografica",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "82df77ff",
+      "displayName": "area_aseguradoras",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.area_aseguradoras",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "a5c896f4",
+      "displayName": "heatmap_horas_pico",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.heatmap_horas_pico",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "1be1d9b0",
+      "displayName": "auditoria_predicciones_modelo_v1",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.auditoria_predicciones_modelo_v1",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "532ee7e9",
+      "displayName": "histograma_consultas",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.histograma_consultas",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
     }
   ],
   "pages": [
@@ -175,7 +217,7 @@
             "name": "0ba00bd0",
             "multilineTextboxSpec": {
               "lines": [
-                "<span style=\"font-size: 36px;line-height: 1.5;\">**Metricas Anuales y Predicciones**</span>"
+                "# <span style=\"font-size:33px;line-height:1.5\">**Diagnóstico y Situación Actual&#32; </span>de las Clínicas PMM 2026**"
               ]
             }
           },
@@ -257,6 +299,40 @@
                   ],
                   "disaggregated": false
                 }
+              },
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18260d9db1e28a29c53154c8ea4ca_Sucursal",
+                "query": {
+                  "datasetName": "96b807b5",
+                  "fields": [
+                    {
+                      "name": "Sucursal",
+                      "expression": "`Sucursal`"
+                    },
+                    {
+                      "name": "Sucursal_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252d312155fbecae312a158aa09_Sucursal",
+                "query": {
+                  "datasetName": "fdf50fbf",
+                  "fields": [
+                    {
+                      "name": "Sucursal",
+                      "expression": "`Sucursal`"
+                    },
+                    {
+                      "name": "Sucursal_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
               }
             ],
             "spec": {
@@ -283,6 +359,14 @@
                   {
                     "fieldName": "Sucursal",
                     "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252e14f14ac86ea80c02339e923_Sucursal"
+                  },
+                  {
+                    "fieldName": "Sucursal",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18260d9db1e28a29c53154c8ea4ca_Sucursal"
+                  },
+                  {
+                    "fieldName": "Sucursal",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252d312155fbecae312a158aa09_Sucursal"
                   }
                 ]
               }
@@ -366,6 +450,40 @@
                   ],
                   "disaggregated": false
                 }
+              },
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18260d9db1e28a29c53154c8ea4ca_Especialidad",
+                "query": {
+                  "datasetName": "96b807b5",
+                  "fields": [
+                    {
+                      "name": "Especialidad",
+                      "expression": "`Especialidad`"
+                    },
+                    {
+                      "name": "Especialidad_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252d312155fbecae312a158aa09_Especialidad",
+                "query": {
+                  "datasetName": "fdf50fbf",
+                  "fields": [
+                    {
+                      "name": "Especialidad",
+                      "expression": "`Especialidad`"
+                    },
+                    {
+                      "name": "Especialidad_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
               }
             ],
             "spec": {
@@ -392,6 +510,14 @@
                   {
                     "fieldName": "Especialidad",
                     "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252e14f14ac86ea80c02339e923_Especialidad"
+                  },
+                  {
+                    "fieldName": "Especialidad",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18260d9db1e28a29c53154c8ea4ca_Especialidad"
+                  },
+                  {
+                    "fieldName": "Especialidad",
+                    "queryName": "dashboards/01f181f901a81ff98d822e24347ba894/datasets/01f18252d312155fbecae312a158aa09_Especialidad"
                   }
                 ]
               }
@@ -821,57 +947,428 @@
         },
         {
           "widget": {
-            "name": "a23cd191",
-            "multilineTextboxSpec": {
-              "lines": [
-                "En el gráfico de pastel se visualiza el volumen de citas que fueron aseguradas por ciertas aseguradoras asociadas a la red de clínicas. Nos permite visualizar la distribución de quienes son aquellas aseguradoras que aportan principalmente."
-              ]
-            }
-          },
-          "position": {
-            "x": 0,
-            "y": 11,
-            "width": 6,
-            "height": 2
-          }
-        },
-        {
-          "widget": {
-            "name": "7c6821d6",
-            "multilineTextboxSpec": {
-              "lines": [
-                "En el gráfico de pastel se visualiza el volumen de citas que fueron aseguradas por ciertas aseguradoras asociadas a la red de clínicas. Nos permite visualizar la distribución de quienes son aquellas aseguradoras que aportan principalmente."
-              ]
+            "name": "total-de",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "96b807b5",
+                  "fields": [
+                    {
+                      "name": "sum(Total_Atenciones)",
+                      "expression": "SUM(`Total_Atenciones`)"
+                    },
+                    {
+                      "name": "Segmento_Poblacional",
+                      "expression": "`Segmento_Poblacional`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Total de Citas Atendidas por Segmento Poblacional"
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "sum(Total_Atenciones)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Total de Atenciones"
+                },
+                "color": {
+                  "fieldName": "Segmento_Poblacional",
+                  "displayName": "Segmento Poblacional",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
             }
           },
           "position": {
             "x": 6,
             "y": 11,
             "width": 6,
-            "height": 2
+            "height": 6
           }
         },
         {
           "widget": {
-            "name": "c06394f5",
+            "name": "rentabilidad",
             "queries": [
               {
                 "name": "main_query",
                 "query": {
-                  "datasetName": "5ab4b166",
-                  "disaggregated": true
+                  "datasetName": "fdf50fbf",
+                  "fields": [
+                    {
+                      "name": "avg(Rentabilidad_Por_Hora_USD)",
+                      "expression": "AVG(`Rentabilidad_Por_Hora_USD`)"
+                    },
+                    {
+                      "name": "Especialidad",
+                      "expression": "`Especialidad`"
+                    },
+                    {
+                      "name": "sum(Rentabilidad_Por_Hora_USD)",
+                      "expression": "SUM(`Rentabilidad_Por_Hora_USD`)"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "DESC",
+                      "expression": "SUM(`Rentabilidad_Por_Hora_USD`)"
+                    }
+                  ]
                 }
               }
             ],
             "spec": {
               "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Rentabilidad por Hora Promedio de las Especialidades"
+              },
               "widgetType": "bar",
-              "encodings": {}
+              "encodings": {
+                "x": {
+                  "fieldName": "avg(Rentabilidad_Por_Hora_USD)",
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "USD",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  },
+                  "displayName": "Rentabilidad por Hora Promedio",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "Especialidad",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "measure-reversed",
+                      "measure": {
+                        "fieldName": "sum(Rentabilidad_Por_Hora_USD)"
+                      }
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
             }
           },
           "position": {
             "x": 0,
-            "y": 13,
+            "y": 11,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "7b4f8285",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "82df77ff",
+                  "fields": [
+                    {
+                      "name": "nom_aseguradora",
+                      "expression": "`nom_aseguradora`"
+                    },
+                    {
+                      "name": "mes_cita",
+                      "expression": "`mes_cita`"
+                    },
+                    {
+                      "name": "sum(ingresos_totales)",
+                      "expression": "SUM(`ingresos_totales`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "area",
+              "encodings": {
+                "x": {
+                  "fieldName": "mes_cita",
+                  "axis": {
+                    "labelAngle": 0
+                  },
+                  "displayName": "Mes",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "natural-order"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(ingresos_totales)",
+                  "displayName": "Ingresos Totales",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "nom_aseguradora",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 23,
+            "width": 12,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "heat",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a5c896f4",
+                  "fields": [
+                    {
+                      "name": "sum(total_citas)",
+                      "expression": "SUM(`total_citas`)"
+                    },
+                    {
+                      "name": "Dia_semana",
+                      "expression": "`Dia_semana`"
+                    },
+                    {
+                      "name": "Hora_inicio",
+                      "expression": "`Hora_inicio`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Heatmap de Citas por Hora y Día"
+              },
+              "widgetType": "heatmap",
+              "encodings": {
+                "x": {
+                  "fieldName": "Dia_semana",
+                  "axis": {
+                    "title": "Día de la Semana"
+                  },
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "custom-order",
+                      "orderedValues": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday"
+                      ]
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "Hora_inicio",
+                  "axis": {
+                    "title": "Hora de Inicio"
+                  },
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "color": {
+                  "fieldName": "sum(total_citas)",
+                  "displayName": "Total de Citas",
+                  "scale": {
+                    "type": "quantitative",
+                    "colorRamp": {
+                      "mode": "scheme",
+                      "scheme": "greens"
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 17,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "649cfd8d",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## <span style=\"font-size: 24px;\">Predicciones del rendimiento</span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 29,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "eva",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "1be1d9b0",
+                  "fields": [
+                    {
+                      "name": "Precio_Predicho_",
+                      "expression": "`Precio_Predicho_`"
+                    },
+                    {
+                      "name": "Precio_Real_",
+                      "expression": "`Precio_Real_`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "jsonSpec": {
+                "type": "vega-lite",
+                "spec": "{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n  \"description\": \"Scatter plot de Precio Real vs Predicho con línea de identidad Y=X\",\n  \"width\": \"container\",\n  \"height\": \"container\",\n  \"autosize\": {\n    \"type\": \"fit\",\n    \"contains\": \"padding\"\n  },\n  \"data\": {\n    \"name\": \"databricks_query\"\n  },\n  \"layer\": [\n    {\n      \"description\": \"Capa 1: Puntos del Scatter Plot (Predicciones)\",\n      \"mark\": {\n        \"type\": \"point\",\n        \"filled\": true,\n        \"size\": 50,\n        \"color\": \"#1f77b4\",\n        \"opacity\": 0.6\n      },\n      \"encoding\": {\n        \"x\": {\n          \"field\": \"Precio_Real_\",\n          \"type\": \"quantitative\",\n          \"title\": \"Precio Real ($)\",\n          \"scale\": {\n            \"domain\": [20, 200],\n            \"clamp\": true\n          }\n        },\n        \"y\": {\n          \"field\": \"Precio_Predicho_\",\n          \"type\": \"quantitative\",\n          \"title\": \"Precio Predicho ($)\",\n          \"scale\": {\n            \"domain\": [20, 190],\n            \"clamp\": true\n          }\n        },\n        \"tooltip\": [\n          {\"field\": \"Precio_Real_\", \"type\": \"quantitative\", \"title\": \"Valor Real ($)\"},\n          {\"field\": \"Precio_Predicho_\", \"type\": \"quantitative\", \"title\": \"Valor Predicho ($)\"}\n        ]\n      }\n    },\n    {\n      \"description\": \"Capa 2: Línea de Referencia Diagonal Perfecta (Y = X)\",\n      \"mark\": {\n        \"type\": \"line\",\n        \"color\": \"#FF4136\",\n        \"strokeWidth\": 2,\n        \"strokeDash\": [5, 5]\n      },\n      \"encoding\": {\n        \"x\": {\n          \"field\": \"Precio_Predicho_\",\n          \"type\": \"quantitative\"\n        },\n        \"y\": {\n          \"field\": \"Precio_Predicho_\",\n          \"type\": \"quantitative\"\n        }\n      }\n    }\n  ],\n  \"config\": {\n    \"view\": {\"stroke\": \"transparent\"}\n  }\n}"
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Evaluación de Machine Learning: Precio Real vs. Predicho"
+              },
+              "widgetType": "custom-vega-viz",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Precio_Predicho_"
+                  },
+                  {
+                    "fieldName": "Precio_Real_"
+                  }
+                ]
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 30,
+            "width": 12,
+            "height": 10
+          }
+        },
+        {
+          "widget": {
+            "name": "c-1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "532ee7e9",
+                  "fields": [
+                    {
+                      "name": "Edad",
+                      "expression": "`Edad`"
+                    },
+                    {
+                      "name": "sum(Citas)",
+                      "expression": "SUM(`Citas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Cantidad de Citas por Edad"
+              },
+              "widgetType": "histogram",
+              "encodings": {
+                "x": {
+                  "fieldName": "Edad",
+                  "axis": {
+                    "labelAngle": 0
+                  },
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(Citas)",
+                  "displayName": "Cantidad de Citas",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 17,
             "width": 6,
             "height": 6
           }
